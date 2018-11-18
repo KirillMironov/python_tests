@@ -21,12 +21,7 @@ class MatrixTest(unittest.TestCase):
             matrix.append(row)
         return matrix
 
-    def testDynamicMatrix(self):
-        matrix1 = np.array(self.createDynamicMatrix(3, 8))
-        matrix2 = np.array(self.createDynamicMatrix(8, 7))
-        result = matrix1 @ matrix2
-        print(result)
-
 
 if __name__ == '__main__':
     unittest.main()
+
