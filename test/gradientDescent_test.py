@@ -18,7 +18,7 @@ class DerivativeTest(unittest.TestCase):
         min_step = 0.0000001
 
         self.assertAlmostEqual(0.9999951805, gd.calculate(lambda x: 2 * (x - 1), 0.0, epsilon, min_step), places=5)
-        #self.assertAlmostEqual(math.pi+1, gd.calculate(lambda x: x**3-3*x**2+2*x, 1.0, epsilon, min_step), places=5)
+        self.assertAlmostEqual(4.1415828, gd.calculate(lambda x: -math.sin(x-1), math.pi, epsilon, min_step), places=5)
         self.assertAlmostEqual(4.71236198, gd.calculate(lambda x: math.exp(math.sin(x))*math.cos(x), 2.0, epsilon, min_step), places=5)
 
 
