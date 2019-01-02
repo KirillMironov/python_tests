@@ -1,4 +1,3 @@
-
 import tensorflow as tf
 tf.reset_default_graph()   # To clear the defined variables and operations of the previous cell
 # create graph
