@@ -1,7 +1,5 @@
 import math
 
-n, m, a = (int(i) for i in input().split())
-
 n1 = n / a
 m1 = m / a
 
