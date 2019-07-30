@@ -1,12 +1,6 @@
-import sys
-
 n = int(input())
 a = list(input().split(' '))
 output = []
-
-if n == 1:
-    print(1)
-    sys.exit(0)
 
 
 def find(array):
