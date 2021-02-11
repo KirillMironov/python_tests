@@ -1,14 +1,18 @@
 print('Введите строку:')
 inp = input()
 arr = []
-s = 0
 
-for i in range(0, len(inp), 7):
-    arr.append(int(inp[i])*60+int(inp[i+2:i+4]))
-    # print(float(inp[i:i+4]))
-    # print(inp[i]+':'+inp[i+2:i+4]+'.'+'00')
+for i in range(0, len(inp), 4):
+    arr.append(int(inp[i]) * 60 + int(inp[i+2:i+4]))
 
+s = sum(arr)/len(arr)
+res = str(round(s // 60)) + ','
 
-print("\n", sum(arr)/len(arr))
-print(len(arr))
+if int(s - 60 * (s // 60)) < 10:
+    res += '0' + str(round(s - 60 * (s // 60)))
+else:
+    res += str(round(s - 60 * (s // 60)))
+
+print('\n', res)
+
 
